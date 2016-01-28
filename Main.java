@@ -1,10 +1,12 @@
 package pkg2d.window.game;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 
-public class Main extends JFrame{
+public class Main extends JFrame implements ActionListener{
 
     private static final long serialVersionUID = 1L;
     
@@ -21,11 +23,22 @@ public class Main extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
         //Creates Buttons
-        JButton begin = new JButton("Click Me!");
+        JButton begin = new JButton("I will do stuff!");
+        JButton moreBut = new JButton("Batman");
+        begin.addActionListener(this);
+        moreBut.addActionListener(this);
         add(begin);
-        JButton test = new JButton("I'm a test");
-        add(test);
+        add(moreBut);
         //;
+    }
+    @Override
+    public void actionPerformed(ActionEvent e){
+        String name = e.getActionCommand();
+        if(name.equals("I will do stuff!")){
+            System.out.println("Button has been clicked");
+        }else if(name.equals("Batman")){
+            System.out.println("I'm BATMAN");
+        }
     }
     
 }
