@@ -1,8 +1,8 @@
 package pkg2d.window.game;
 
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+//Imports
+import java.awt.*;
+import java.awt.event.*;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 
@@ -21,24 +21,29 @@ public class Main extends JFrame implements ActionListener{
         setSize(1024, 768); //800 x 600
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new FlowLayout());
+        setLayout(new GridBagLayout()); //More Layouts = Default, FlowLayout, GridLayout, GridBagLayout, BorderLayout
         //Creates Buttons
         JButton begin = new JButton("I will do stuff!");
-        JButton moreBut = new JButton("Batman");
         begin.addActionListener(this);
-        moreBut.addActionListener(this);
+        begin.setActionCommand("begin");
         add(begin);
+        //Creates Batman
+        JButton moreBut = new JButton("Batman");
+        moreBut.addActionListener(this);
+        moreBut.setActionCommand("batman");
         add(moreBut);
         //;
     }
     @Override
     public void actionPerformed(ActionEvent e){
         String name = e.getActionCommand();
-        if(name.equals("I will do stuff!")){
+        if(name.equals("begin")){
             System.out.println("Button has been clicked");
-        }else if(name.equals("Batman")){
-            System.out.println("I'm BATMAN");
+        }else if(name.equals("batman")){
+            System.out.println("I'M BATMAN!");
         }
     }
     
 }
+
+//GO to https://www.youtube.com/watch?v=ww-WxPkKMio for troll
