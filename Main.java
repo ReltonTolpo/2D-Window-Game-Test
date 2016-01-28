@@ -20,11 +20,12 @@ public class Main extends JFrame{
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
-        //;
+        //Creates Buttons
         JButton begin = new JButton("Click Me!");
         add(begin);
         JButton test = new JButton("I'm a test");
         add(test);
+        //;
     }
     
 }
