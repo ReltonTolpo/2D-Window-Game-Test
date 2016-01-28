@@ -21,17 +21,17 @@ public class Main extends JFrame implements ActionListener{
         setSize(1024, 768); //800 x 600
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLayout(new GridBagLayout()); //More Layouts = Default, FlowLayout, GridLayout, GridBagLayout, BorderLayout
+        setLayout(new BorderLayout()); //More Layouts = Default, FlowLayout, GridLayout, GridBagLayout, BorderLayout
         //Creates Buttons
         JButton begin = new JButton("I will do stuff!");
         begin.addActionListener(this);
         begin.setActionCommand("begin");
-        add(begin);
+        add(begin, BorderLayout.WEST);
         //Creates Batman
-        JButton moreBut = new JButton("Batman");
+        JButton moreBut = new JButton("Batman Superpowers ACTIVATE");
         moreBut.addActionListener(this);
         moreBut.setActionCommand("batman");
-        add(moreBut);
+        add(moreBut, BorderLayout.NORTH);
         //;
     }
     @Override
