@@ -40,10 +40,9 @@ public class Main extends JFrame implements ActionListener{
         if(name.equals("begin")){
             System.out.println("Button has been clicked");
         }else if(name.equals("batman")){
-            System.out.println("I'M BATMAN!");
+            System.out.println("IM BATMAN");
         }
     }
-    
 }
 
 //GO to https://www.youtube.com/watch?v=ww-WxPkKMio for troll
